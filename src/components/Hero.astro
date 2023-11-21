@@ -1,19 +1,45 @@
 ---
 ---
 
+  <div class="logo">
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90" fill="none">
+  <circle cx="45" cy="45" r="45" fill="#196472"/>
+  </svg> </div>
+  <div class="logo-d"><svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+    <path d="M30.9999 0.582645C14.2276 0.582645 0.582245 14.2278 0.582245 30.9994C0.582245 35.5988 1.58436 40.0193 3.56137 44.1394L3.65491 44.3361L5.54662 43.4279L5.45103 43.231C3.61397 39.4 2.68184 35.2843 2.68184 30.9994C2.68184 15.385 15.3848 2.68224 30.9999 2.68224C46.6152 2.68224 59.318 15.385 59.318 30.9994C59.318 46.6145 46.6152 59.3184 30.9999 59.3184C27.7944 59.3184 24.6895 58.6101 23.35 58.2609V12.5986H21.2504L21.2539 59.8366L21.9953 60.0623C22.4483 60.2011 26.5505 61.418 30.9999 61.418C47.7724 61.418 61.4178 47.7719 61.4178 30.9994C61.4178 14.2278 47.7724 0.582645 30.9999 0.582645Z" fill="#FFE781"/>
+    </svg></div>
 <div class="grid_1-1">
   <div class="ballet"></div>
+  <div class="m"><h2>Mærk</h2></div>
+  <div class="danse"> <h1>DANSE</h1></div>
   <div class="pic-container">
+    <h3>Tilmelding til efterårssæsonen 2023 er forsat åben.</h3>
+  
     <img src="../images/ballet-girl-pic.png" alt="" />
   </div>
-  <div class="gul2">sbhfjbsjdfbsj</div>
+  <div class="studiet"> <h1>Studiet</h1> <p class="s">s</p></div>
+  <div class="r"><h2>Rytme</h2></div>
+  <div class="gul2"></div>
 </div>
 <style>
+
+.logo{
+  position: absolute;
+  top: 6rem;
+  left: 2.31rem;
+
+}
+
+.logo-d{
+  position: absolute;
+  top: 6.80rem;
+  left: 3.10rem;
+}
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    width: 94.4375rem;
+    max-width: 94.4375rem;
     height: 64.125rem;
   }
 
@@ -30,6 +56,80 @@
   .gul2 {
     background-color: #fff8e1;
   }
+
+  h3{
+   text-align: center;
+    color: #2A8495;
+font-family: Avenir Next;
+font-size: 1.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+  }
+
+  .m{
+    color: #196472;
+/* h2 */
+font-family: DansestudietDisplay1;
+font-size: 2.5rem;
+font-style: normal;
+position: absolute;
+top: 16.63rem;
+left: 10.44rem;
+
+  }
+  .danse{
+color: #196472;
+font-family: DansestudietDisplay1;
+font-size: 4rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: absolute;
+top: 18.38rem;
+left: 10.44rem;
+  }
+
+.studiet{
+color: #196472;
+font-family: DansestudietDisplay1;
+font-size: 4rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: absolute;
+top: 18.38rem;
+right: 8.56rem;
+  }
+
+  .s{
+    color: #196472;
+font-family: DansestudietDisplay1;
+font-size: 4rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: absolute;
+top: 5.2rem;
+right: -2rem;
+  }
+
+  .r{
+    color: #196472;
+
+/* h2 */
+font-family: DansestudietDisplay1;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 3rem */
+position: absolute;
+top: 3.90rem;
+right: 6.30rem;
+top: 30.38rem;
+  }
+
 
   img {
     position: absolute;
