@@ -1,18 +1,18 @@
 ---
+const { title, fontsize, size } = Astro.props;
 ---
 
-<button>
-  <h2>SE SKEMA</h2>
-</button>
+<article data-variant={fontsize}>
+  <button data-size={size}>
+    <p>{title}</p>
+  </button>
+</article>
 
 <style>
-  h2 {
-    /* h2 */
+  p {
+    /* font for button */
     margin: 0;
     font-family: DansestudietDisplay1;
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 700;
   }
   button {
     padding: var(--vertical, 1.625rem) var(--horizontal, 4.75rem);
@@ -26,5 +26,37 @@
     background: var(--buttons-button-default, #fff8e1);
     color: var(--buttons-text-button-default, #196472);
     transition: background-color 300ms;
+  }
+
+  /* sizes */
+  [data-size="large"] {
+    padding: var(--vertical, 1.625rem) var(--horizontal, 4.75rem);
+    border-radius: var(--radius, 3.125rem);
+  }
+
+  [data-size="medium"] {
+    padding: var(--vertical-small, 1.25rem) var(--horizontal-small, 4.125rem);
+  }
+
+  [data-size="small"] {
+    padding: var(--vertical-small, 1.25rem) var(--horizontal-small, 4.125rem);
+  }
+
+  [data-fontsize="h1"] {
+    font-size: 2.5rem;
+    font-style: bold;
+    font-weight: 900;
+  }
+
+  [data-fontsize="h2"] {
+    font-size: 1.5625rem;
+    font-style: bold;
+    font-weight: 900;
+  }
+
+  [data-fontsize="h3"] {
+    font-size: 1.25rem;
+    font-style: bold;
+    font-weight: 900;
   }
 </style>
