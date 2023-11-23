@@ -1,6 +1,7 @@
 ---
 import Hero from "../components/Hero.astro";
 import Om from "../components/Om.astro";
+import Circularbutton from "../components/Circularbutton.astro";
 ---
 
 <html lang="en">
@@ -9,11 +10,13 @@ import Om from "../components/Om.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <title>Astro</title>
   </head>
   <body>
     <h1>Astro</h1>
-    <Hero />
-    <Om />
+    <!-- <Hero />
+    <Om /> -->
+    <Circularbutton />
   </body>
 </html>

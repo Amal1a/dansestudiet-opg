@@ -1,6 +1,7 @@
 ---
 ---
 
+<!-- 
 <div class="circular-text">
   <span id="rotated"
     >/ MÆRK RYTMEN / JAM MED / SE SKEMA / MÆRK RYTMEN / JAM MED / SE SKEMA /
@@ -23,3 +24,91 @@
       stroke-linejoin="bevel"></path>
   </svg>
 </div>
+
+<style>
+  .circular-text {
+    position: fixed;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.3785rem;
+    color: var(--buttons-text-button-default, #ffe781);
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: "Avenir Next";
+    transition: 0.5s ease-out;
+  }
+
+  .arrow{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  svg{
+    size:100px
+  }
+</style>
+
+<script>
+const circleType = new CircleType(document.getElementById("rotated")).radius(80);
+
+$(window).scroll(function)() {
+    var offset = $(window).scrollTop();
+    offset = offset * 0.4;
+  $(".circular-text").css({
+    "-moz-transform" : "rotate(" + offset + "deg)",
+    "-webkit-transform" : "rotate(" + offset + "deg)",
+    "-o-transform" : "rotate(" + offset + "deg)",
+    "-ms-transform" : "rotate(" + offset + "deg)",
+    "transform" : "rotate(" + offset + "deg)",
+
+  });
+};
+</script> -->
+<article id="body-round">
+  <p id="text">MÆRK RYTMEN / JAM MED / SE SKEMA</p>
+</article>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .body-round {
+    display: grid;
+    place-items: center;
+  }
+
+  #text {
+    height: 220px;
+    font-size: 16px;
+    animation: animate 10s linear infinite;
+  }
+
+  span {
+    position: absolute;
+    transform-origin: 0 80px;
+  }
+
+  @keyframes animeate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<script>
+  const text = document.getElementById("text");
+  text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+  const ele = document.querySelectorAll("span");
+  for (var i = 0; i < ele.length; i++) {
+    ele[i].style.transform = "rotate(" + i * 16.5 + "deg)";
+  }
+</script>
