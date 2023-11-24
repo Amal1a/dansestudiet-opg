@@ -1,0 +1,75 @@
+---
+import Button from "./Button.astro";
+---
+
+<article class="grid_1-1">
+  <div class="text-box">
+    <h1>
+      25 top kompetente undervisere! Vi har samlet et unikt under-viserteam
+    </h1>
+  </div>
+
+  <div class="button-box">
+    <div class="btn-box">
+      <Button title="MØD DEM HER" size="large" />
+    </div>
+    <div class="ani-blob-small">
+      <dotlottie-player
+        src="https://lottie.host/ba092c11-563e-4571-8c39-729b3e8c5746/chEgiXvMTc.json"
+        background="transparent"
+        speed="1"
+        style=" width: 37.875rem;height: 13.625rem;"
+        loop
+        autoplay></dotlottie-player>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 39.1875rem;
+    align-items: center;
+    justify-items: center;
+  }
+  div {
+    flex-direction: column;
+  }
+  h1 {
+    color: #196472;
+    margin: 0;
+    font-family: DansestudietDisplay1;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 4.8rem */
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 31.25rem;
+    gap: var(--spacing-gap-vertical, 2rem);
+    justify-content: center;
+  }
+  .ani-blob-small {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    margin-left: -21%;
+    margin-top: -7%;
+  }
+
+  .btn-box {
+    background: none;
+    position: absolute;
+    margin-left: -12%;
+    margin-top: -3.5%;
+    z-index: 2;
+  }
+</style>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
